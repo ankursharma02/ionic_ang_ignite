@@ -1,0 +1,30 @@
+page-requistions-form 
+{
+    .secondry-content {
+        background: rgb(60, 60, 60);
+    }
+
+    .primary-content {
+        background: rgb(22, 21, 21);
+    }
+    .ternary-content{
+        background: rgba(12, 223, 22, 0.144);
+    }
+    .balanced{
+        color: rgba(255, 0, 0, 0.699);
+      }
+    textarea{
+        height:200px;	
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .item-divider{
+        background: rgb(90, 85, 85);
+        color: white;
+      }
+      .item-divider:active{
+        opacity: 0.8;
+      }
+
+
+}

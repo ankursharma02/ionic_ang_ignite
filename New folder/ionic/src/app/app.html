@@ -1,0 +1,62 @@
+
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="dark">
+        <ion-title>Pages</ion-title>
+    </ion-toolbar>
+</ion-header>
+  <ion-content>
+      <ion-card color="dark" text-center class="hide-card">
+          <img src="assets/imgs/demo1.jpg" class="custom-avatar"/>
+          <h2>AI Think</h2>
+          <p>3.2</p>
+          
+        </ion-card>
+      <ion-list background-color="black">
+          <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+              <ion-icon name={{p.icon}}></ion-icon>
+            {{p.title}}
+          </button>
+        </ion-list>
+        <ion-card text-center class="hide-card">
+            <img src="assets/imgs/images.jpg" class="super-avatar" item-right/>
+          </ion-card>
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu [content]="content" side="right" id="menu2">
+  <ion-header>
+      <ion-toolbar color="dark">
+          <ion-title>USER PROFILE</ion-title>
+      </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-list>
+          <button ion-item *ngFor="let p of pages1" (click)="openPage(p)">
+              <ion-icon name={{p.icon}}></ion-icon>
+            {{p.title}}
+          </button>
+        </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle="left" start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="title1">
+      {{t}}
+    </ion-title>
+    <button ion-button menuToggle="right" end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+
+
+ </ion-content>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>
